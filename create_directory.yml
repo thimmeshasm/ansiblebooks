@@ -1,0 +1,9 @@
+---
+- name: my test playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: creates a directry
+    file:
+     path: /home/ansadmin/dir1
+     state: directory  

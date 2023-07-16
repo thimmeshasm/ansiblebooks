@@ -1,0 +1,8 @@
+---
+- name: my test playbook
+  hosts: all
+  become: true
+  tasks: 
+  - name: creating onemore user akash
+    user:
+     name: akash  

@@ -1,0 +1,10 @@
+---
+- name: stop tomcat service
+  hosts: all
+  become: true
+  tasks:
+  - name:  stop tomcat service
+    service:
+     name: tomcat*
+     state: stopped
+
