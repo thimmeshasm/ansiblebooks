@@ -17,21 +17,21 @@
 
   - name: download tomcat
     get_url: 
-     url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.91/bin/apache-tomcat-8.5.91.tar.gz
+     url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.95/bin/apache-tomcat-8.5.95.tar.gz
      dest: /opt
 
   - name: extract tar file   
     unarchive:
-      src: /opt/apache-tomcat-8.5.91.tar.gz
+      src: /opt/apache-tomcat-8.5.95.tar.gz
       dest: /opt
       remote_src: yes
 
   - name: changing permissions for a file (.sh file)
     file:
-      path: /opt/apache-tomcat-8.5.91/bin/startup.sh
+      path: /opt/apache-tomcat-8.5.95/bin/startup.sh
       mode: 0777
 
   - name: excute.sh file to start tomcat server
     shell: nohup ./startup.sh
     args: 
-     chdir: /opt/apache-tomcat-8.5.91/bin 
+     chdir: /opt/apache-tomcat-8.5.95/bin 
